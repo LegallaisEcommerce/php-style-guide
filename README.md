@@ -119,11 +119,11 @@ function foo($bar) {
 ```php
 // Bad
 $myArray = array(
-	'foo' => $bar;
+    'foo' => $bar;
 );
 
 // Good
 $myArray = [
-	'foo' => 'bar';
+    'foo' => 'bar';
 ];
 ```
