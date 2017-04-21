@@ -153,12 +153,12 @@ function foo($bar) {
 ```php
 // Bad
 $myArray = array(
-    'foo' => 'bar';
+    'foo' => 'bar',
 );
 
 // Good
 $myArray = [
-    'foo' => 'bar';
+    'foo' => 'bar',
 ];
 ```
 
@@ -168,13 +168,13 @@ $myArray = [
 // Bad
 $myArray = [
     'foo' => 'bar';
-    'myArrayKey' => 'baz';
+    'myArrayKey' => 'baz',
 ];
 
 // Good
 $myArray = [
-    'foo'        => 'bar';
-    'myArrayKey' => 'baz';
+    'foo'        => 'bar',
+    'myArrayKey' => 'baz',
 ];
 ```
 
@@ -183,14 +183,46 @@ $myArray = [
 ```php
 // Bad
 $var->longMethodName()->anotherLongMethodName() = [
-                                                        'foo'        => 'bar';
-                                                        'myArrayKey' => 'baz';
+                                                        'foo'        => 'bar',
+                                                        'myArrayKey' => 'baz',
                                                    ];
 
 // Good
 $var->longMethodName()->anotherLongMethodName() = [
-    'foo'        => 'bar';
-    'myArrayKey' => 'baz';
+    'foo'        => 'bar',
+    'myArrayKey' => 'baz',
+];
+```
+
+- Break lines if array is longer than one pair of key => value.
+
+```php
+// Bad
+$myArray = ['foo' => 'bar', 'myArrayKey' => 'baz'];
+
+// Good
+$myArray = [
+    'foo'        => 'bar',
+    'myArrayKey' => 'baz',
+];
+
+// Good
+$myArray = ['foo' => 'bar'];
+```
+
+- Always put a comma after values, even on last one.
+
+```php
+// Bad
+$myArray = [
+    'foo'        => 'bar',
+    'myArrayKey' => 'baz'
+];
+
+// Good
+$myArray = [
+    'foo'        => 'bar',
+    'myArrayKey' => 'baz',
 ];
 ```
 
