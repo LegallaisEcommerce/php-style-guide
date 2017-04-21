@@ -343,3 +343,31 @@ $foo = true;
 $bar = false;
 $baz = null;
 ```
+
+- Dont repeat object name in methods
+
+```php
+// Bad
+class Product
+{
+    public function setProductTitle($title)
+    {
+	
+    }
+}
+
+$product      = new Product();
+$productTitle = $product->setProductTitle('Product Title');
+
+// Good
+class Product
+{
+    public function setTitle($title)
+    {
+	
+    }
+}
+
+$product      = new Product();
+$productTitle = $product->setTitle('Product Title');
+```
