@@ -227,7 +227,7 @@ $foo           = $fooRepository->findOneBy(['name' => 'bar']);
 
 ```php
 // Bad
-$toto = true; :trollface:
+$toto = true;
 
 // Bad
 $p = $this->getProduct($pid);
