@@ -68,3 +68,45 @@ function foo() {
 }
 
 ```
+
+- Place 1 space before the leading brace
+
+```php
+// Bad
+function foo(){
+    return true;
+}
+
+// Good
+function foo() {
+    return true;
+}
+```
+
+- Place 1 after the comma between arguments
+
+```php
+// Bad
+function foo($bar,$baz) {
+    return true;
+}
+
+// Good
+function foo($bar, $baz) {
+    return true;
+}
+```
+
+- Do not add spaces inside parentheses.
+
+```php
+// Bad
+function foo( $bar ) {
+    return true;
+}
+
+// Good
+function foo($bar) {
+    return true;
+}
+```
