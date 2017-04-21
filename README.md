@@ -91,19 +91,19 @@ function foo() {
 // Bad
 class Foo {
 
-	public function bar() {
+    public function bar() {
 	
-	}
+    }
 }
 
 // Good
 class Foo
 {
 
-	public function bar()
-	{
+    public function bar()
+    {
 	
-	}
+    }
 }
 ```
 
