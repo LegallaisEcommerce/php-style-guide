@@ -235,3 +235,26 @@ $p = $this->getProduct($pid);
 // Good
 $product = $this->getProduct($productId);
 ```
+
+- Use lower camelCase for variable and method names.
+
+```php
+// Bad
+public function get_productid()
+{
+
+}
+
+// Good
+public function getProductId()
+{
+
+}
+
+// Bad
+$Productid = $this->getProductId();
+
+// Good
+$productId = $this->getProductId();
+
+```
