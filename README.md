@@ -85,6 +85,28 @@ function foo() {
 }
 ```
 
+- Add a line break before leading brace for class and methods
+
+```php
+// Bad
+class Foo {
+
+	public function bar() {
+	
+	}
+}
+
+// Good
+class Foo
+{
+
+	public function bar()
+	{
+	
+	}
+}
+```
+
 - Place 1 after the comma between arguments
 
 ```php
