@@ -258,3 +258,20 @@ $Productid = $this->getProductId();
 $productId = $this->getProductId();
 
 ```
+
+
+- Use upper camelCase class names.
+
+```php
+// Bad
+class myClass
+{
+
+}
+
+// Good
+class MyClass
+{
+
+}
+```
