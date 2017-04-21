@@ -4,6 +4,7 @@
 
 1. [Blocks](#blocks)
 1. [Whitespace](#whitespace)
+1. [Arrays](#arrays)
 
 ## Blocks
 
@@ -109,4 +110,20 @@ function foo( $bar ) {
 function foo($bar) {
     return true;
 }
+```
+
+## Arrays
+
+- Use brackets syntax.
+
+```php
+// Bad
+$myArray = array(
+	'foo' => $bar;
+);
+
+// Good
+$myArray = [
+	'foo' => 'bar';
+];
 ```
