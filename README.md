@@ -9,35 +9,35 @@
 // Bad
 if(test)
 {
-	return false;
+    return false;
 }
 else {
- return true;
+    return true;
 }
 
 // Bad
 if (test) :
-	return false;
+    return false;
 else :
-	return true;
+    return true;
 endif;
 
 // Good
 if (test) {
-	return false;
+    return false;
 } else {
- return true;
+    return true;
 }
 
 // Bad
 if (test)
-	return false;
+    return false;
 
 // Good 
 if (test) return false;
 
 // Good 
 if (test) {
-	return false;
+    return false;
 }
 ```
