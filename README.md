@@ -143,3 +143,19 @@ $myArray = [
     'myArrayKey' => 'baz';
 ];
 ```
+
+- Do not align your array keys with the opening bracket.
+
+```php
+// Bad
+$var->longMethodName()->anotherLongMethodName() = [
+                                                        'foo'        => 'bar';
+                                                        'myArrayKey' => 'baz';
+                                                   ];
+
+// Good
+$var->longMethodName()->anotherLongMethodName() = [
+    'foo'        => 'bar';
+    'myArrayKey' => 'baz';
+];
+```
