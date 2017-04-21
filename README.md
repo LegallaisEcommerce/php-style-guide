@@ -226,6 +226,25 @@ $myArray = [
 ];
 ```
 
+- To push an item to an array, avoid `array_push` *Why ? Easier to read and quicker to execute*
+
+```php
+// Bad
+$myArray = [];
+ 
+foreach ($foo as $bar) {
+   array_push($myArray, $bar);
+}
+
+// Good
+$myArray = [];
+ 
+foreach ($foo as $bar) {
+   $myArray[] = $bar;
+}
+
+```
+
 ## Variables
 
 - Align values with `=` symbol.
