@@ -235,5 +235,3 @@ $p = $this->getProduct($pid);
 // Good
 $product = $this->getProduct($productId);
 ```
-
-- Keep lines short.
