@@ -6,6 +6,7 @@
 1. [Whitespace](#whitespace)
 1. [Arrays](#arrays)
 1. [Variables](#variables)
+1. [Naming](#naming)
 
 ## Blocks
 
@@ -53,6 +54,16 @@ if (test) :
 else :
     return true;
 endif;
+```
+-  Use ternary operators only for small tests.
+
+```php
+// Bad
+$foo = ($bar <= 3) || ($bar >= 12) ? $baz->getLongMethodName() : $baz->getAnotherLongMethodName();
+
+// Good
+$foo = $bar ? true : false;
+
 ```
 
 ## Whitespace
@@ -207,3 +218,22 @@ $foo = $this->getEntityManager()->getRepository('Foo\Entity\Foo')->findOneBy(['n
 $fooRepository = $this->getEntityManager()->getRepository('Foo\Entity\Foo');
 $foo           = $fooRepository->findOneBy(['name' => 'bar']);
 ```
+
+
+
+## Naming
+
+- Use explicit methods and variables names.
+
+```php
+// Bad
+$toto = true; :trollface:
+
+// Bad
+$p = $this->getProduct($pid);
+
+// Good
+$product = $this->getProduct($productId);
+```
+
+- Keep lines short.
