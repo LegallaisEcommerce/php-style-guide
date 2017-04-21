@@ -307,3 +307,39 @@ class MyClass
 
 }
 ```
+
+- Use param_case for `protected` and `private`.
+
+```php
+// Bad
+protected $myVar;
+private $OtherVar;
+
+// Good
+protected $my_var;
+private $other_var;
+```
+
+- Use CONSTANT_CASE for `constant`.
+
+```php
+// Bad
+const FooBar = 42;
+
+// Good
+const FOO_BAR = 42;
+```
+
+- Use lowercase for logical operators.
+
+```php
+// Bad
+$foo = TRUE;
+$bar = FALSE;
+$baz = NULL;
+
+// Good
+$foo = true;
+$bar = false;
+$baz = null;
+```
