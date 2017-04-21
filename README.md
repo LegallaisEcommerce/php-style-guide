@@ -7,6 +7,7 @@
 1. [Arrays](#arrays)
 1. [Variables](#variables)
 1. [Naming](#naming)
+1. [Strings](#strings)
 
 ## Blocks
 
@@ -144,6 +145,16 @@ function foo( $bar ) {
 function foo($bar) {
     return true;
 }
+```
+
+- Place a space before and after concat dot
+
+```php
+// Bad
+$foo = 'Hello '.$name;
+
+// Good
+$foo = 'Hello ' . $name;
 ```
 
 ## Arrays
@@ -389,4 +400,39 @@ class Product
 
 $product      = new Product();
 $productTitle = $product->setTitle('Product Title');
+```
+
+## Strings
+
+- Declare string literals with single quotes `'`. Declare strings containing variable substitution or apostrophes with double quotes `"`. 
+
+```php
+// Bad
+$string = "Hello world!";
+$string = 'Hello $name!';
+$string = 'That\'s all folks!';
+
+// Good
+$string = 'Hello world!';
+$string = "Hello $name!";
+$string = "That's all folks!";
+```
+
+- For interpolations in translations use `sprintf`
+
+```php
+// Bad
+$message = translate('Hello') . ' ' . $name . ' ' . translate('How are you ?');
+
+// Good
+$message = translate(sprintf('Hello %s How are you ?', $name));
+```
+Same in Twig
+
+```twig
+// Bad
+{{ translate('Hello') ~ ' ' ~ $name ~ ' ' ~ translate('How are you ?') }}
+
+// Good
+{{ translate('Hello %s How are you ?') | format(name) }}
 ```
