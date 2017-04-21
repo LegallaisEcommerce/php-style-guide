@@ -119,11 +119,27 @@ function foo($bar) {
 ```php
 // Bad
 $myArray = array(
-    'foo' => $bar;
+    'foo' => 'bar';
 );
 
 // Good
 $myArray = [
     'foo' => 'bar';
+];
+```
+
+- Align values with `=>` sign. There are plugins to do that for your favorite editor.
+
+```php
+// Bad
+$myArray = [
+    'foo' => 'bar';
+    'myArrayKey' => 'baz';
+];
+
+// Good
+$myArray = [
+    'foo'        => 'bar';
+    'myArrayKey' => 'baz';
 ];
 ```
