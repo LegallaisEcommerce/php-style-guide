@@ -5,6 +5,7 @@
 1. [Blocks](#blocks)
 1. [Whitespace](#whitespace)
 1. [Arrays](#arrays)
+1. [Variables](#variables)
 
 ## Blocks
 
@@ -158,4 +159,29 @@ $var->longMethodName()->anotherLongMethodName() = [
     'foo'        => 'bar';
     'myArrayKey' => 'baz';
 ];
+```
+
+## Variables
+
+- Align values with `=` symbol.
+
+```php
+// Bad
+$foo = 'hello';
+$fooBarBaz = 'world';
+
+// Good
+$foo       = 'hello';
+$fooBarBaz = 'world';
+```
+
+- Keep lines short.
+
+```php
+// Bad
+$foo = $this->getEntityManager()->getRepository('Foo\Entity\Foo')->findOneBy(['name' => 'bar']);
+
+// Good
+$fooRepository = $this->getEntityManager()->getRepository('Foo\Entity\Foo');
+$foo           = $fooRepository->findOneBy(['name' => 'bar']);
 ```
